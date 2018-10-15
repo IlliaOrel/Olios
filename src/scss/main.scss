@@ -2,3 +2,12 @@
 @import "vars";
 @import "mixins";
 @import "default";
+@import "components/aside";
+@import "components/main/main";
+@import "components/navigation";
+
+// Search page
+
+@import "components/search/search";
+@import "components/search/search-form";
+@import "components/search/search-result";

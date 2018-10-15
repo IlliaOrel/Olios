@@ -1,9 +1,13 @@
 @mixin rem ($size) {
     font-size: $size / $basic-font-size + rem;
-}
-
-
-@mixin link {
+  }
+  
+  @mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+  }
+  
+  @mixin link {
     text-decoration: none;
     display: inline-block;
     text-transform: uppercase;
@@ -16,9 +20,33 @@
     transition: color .2s linear, background .2s linear;
     padding: 14px 50px;
     border-radius: 35px;
+  
+    &:hover {
+      color: $primary;
+      background: transparent;
+    }
   }
   
-  &:hover {
-    color: $primary;
-    background: transparent;  
-}
+  @mixin reset-btn {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  @mixin medium {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  
+  @mixin small {
+    @media screen and (max-width: 591px) {
+      @content;
+    }
+  }
+  
+  @mixin overlayBackground($color, $url) {
+    background: linear-gradient(to bottom, $color, $color),
+      url($url) center center no-repeat/cover;
+  }

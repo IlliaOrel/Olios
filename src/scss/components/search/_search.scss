@@ -1,0 +1,7 @@
+.search-page {
+    @include overlayBackground(
+      rgba($color: #fff, $alpha: .9),
+      '../img/bg.png'
+    );
+    min-height: 100vh;
+  }

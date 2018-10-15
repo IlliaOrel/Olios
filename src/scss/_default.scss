@@ -28,4 +28,22 @@
   .content {
     padding-left: 144px;
     min-height: 100vh;
+  
+    @include medium {
+      padding-left: 0;
+    }
+  }
+  
+  .container {
+    padding: 0 40px;
+    max-width: 1580px;
+    margin: 0 auto;
+  }
+  
+  .page-offset {
+    padding: 140px 0;
+  
+    @include medium {
+      padding: 0 0 75px 0;
+    }
   }
