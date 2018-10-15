@@ -1,0 +1,26 @@
+.products-page__header {
+    padding-top: 70px;
+  }
+  
+  .container--header-products {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .products-page__title {
+    @include rem(72);
+    color: $primary-text;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 0;
+  
+  
+    @media screen and (max-width: 1031px) {
+      @include rem(35);
+    }
+  
+    @media screen and (max-width: 461px) {
+      @include rem(20);
+    }
+  }

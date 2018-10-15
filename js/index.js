@@ -24,6 +24,7 @@ function init() {
   const input = document.querySelector('#search-textfield');
   const parent = document.querySelector('.search-page__result-row');
   const loader = document.querySelector('.loader');
+  const clearBtn = document.querySelector('.search-form__clear');
 
   const productTemplate = ({ id, title, img }) => {
     return `
@@ -57,5 +58,11 @@ function init() {
       document.querySelector('.result__item').textContent = response.length;
       document.querySelector('.result__item').parentNode.hidden = false;
     }, 2000);
+  });
+
+  clearBtn.addEventListener('click', () => {
+    if (input.value.trim().length > 0) {
+      input.value = '';
+    }
   });
 }
